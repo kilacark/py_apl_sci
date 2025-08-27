@@ -1,0 +1,40 @@
+# Introduction
+Python is as a multi-purpose programming language heavily used in various branches of science. Apart from software development in science, prominent is scripting based approach for computation, scientific visualization, data analysis, model development etc. Python being inherently programming free language emulates in some degree other tools like MATLAB, Wolfram Mathematica, R among many.
+
+Scripting based approach is often related with pile of scripts without clear structure and library incompatibilities. Python offers from software development point of view some tools and way of working to mitigate such problems:
+
+- project based scripting
+- version control (git)
+- virtual environment (venv)
+
+Techniques like Unit testing are usually omitted and are devoted to software development itself.
+
+All presented tools are intended to work locally without cloud services or subscription; eventually at institution´s intranet. The presented text is opinionated and not encompass all Python-world options.
+
+# Integrated development environment (IDE)
+There are plenty of IDE. Spyder focuses directly on science/data science and has MATLAB alike appearance (Editor window, Variable Explorer/Plots and IPython Console for interactive work). However, working with virtual environment is partially tedious (restart Spyder). PyCharm is "all-in-one" partially paid product (pro) with installation about 1 Gb. Visual Studio Code is a lightweight customizable IDE with easy git integration and "real-time" virtual environment switching capability. Hence, VS Code will be used further. Presented methods will occasionally rely on CLI (command line interface) and generally, IDE can be used according to reader´s preferences.
+
+# Project based scripting
+Science is generally connected with the idea-testing with lot of iterations. Hence, there are often scripts like 'model_temp.py; model_temp_v2.py' etc. The good project structure and version control allows to keep code cleaner, maintain basic documentation for further usage. There is often enough to follow shallow structure:
+```
+hertz_pressure
+- src
+    - core
+        contact.py
+    compute.py
+```
+```hertz_pressure``` contains only one script file  ```compute.py``` where will be import ```from core import contact as contact``` and code. Assuming, the project cannot be rigorously structured (Hertz pressure calculation are well established), or the input data are constantly changing is often be advantageous naming with date e.g.
+```
+hertz_pressure
+- src
+    - core
+        contact.py
+    20250827_compute.py
+    20250829_add_new_geom_par.py
+    ...
+```
+and short information into the file header.
+
+It is strongly recommended to think project/task oriented and focus on specific scientific task. It is additionally recommended use project oriented venv (pip alike) instead of global (conda alike). Using project based scripting and venv help immensely initiate new fork from current project.
+
+# Virtual environment (venv)
