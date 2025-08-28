@@ -5,14 +5,14 @@ Scripting based approach is often related with pile of scripts without clear str
 
 - project based scripting
 - version control (git)
-- virtual environment (venv)
+- virtual environment (.venv)
 
 Techniques like Unit testing are usually omitted and are devoted to software development itself.
 
 All presented tools are intended to work locally without cloud services or subscription; eventually at institution´s intranet. The presented text is opinionated and not encompass all Python-world options.
 
 # Integrated development environment (IDE)
-There are plenty of IDE. Spyder focuses directly on science/data science and has MATLAB alike appearance (Editor window, Variable Explorer/Plots and IPython Console for interactive work). However, working with virtual environment is partially tedious (restart Spyder). PyCharm is "all-in-one" partially paid product (pro) with installation about 1 Gb. Visual Studio Code is a lightweight customizable IDE with easy git integration and "real-time" virtual environment switching capability. Hence, VS Code will be used further. Presented methods will occasionally rely on CLI (command line interface) and generally, IDE can be used according to reader´s preferences.
+There are plenty of IDE. Spyder focuses directly on science/data science and has MATLAB alike appearance (Editor window, Variable Explorer/Plots and IPython Console for interactive work). However, working with virtual environment is partially tedious (restart Spyder). PyCharm is "all-in-one" partially paid product (pro) with installation about 1 Gb. Visual Studio Code is a lightweight customizable IDE with easy git integration and "real-time" virtual environment switching capability. Hence, VS Code will be used further. Presented methods will occasionally rely on CLI (command line interface) and generally, IDE can be used according to reader´s preferences. JupyterLab is out scope of this text because .ipynb can be run from Visual Studio Code (with ipykernel library)
 
 # Project based scripting
 Science is generally connected with the idea-testing with lot of iterations. Hence, there are often scripts like 'model_temp.py; model_temp_v2.py' etc. The good project structure and version control allows to keep code cleaner, maintain basic documentation for further usage. There is often enough to follow shallow structure:
@@ -35,6 +35,50 @@ hertz_pressure
 ```
 and short information into the file header.
 
-It is strongly recommended to think project/task oriented and focus on specific scientific task. It is additionally recommended use project oriented venv (pip alike) instead of global (conda alike). Using project based scripting and venv help immensely initiate new fork from current project.
+It is strongly recommended to think project/task oriented and focus on specific scientific task. It is additionally recommended use project oriented .venv (pip alike) instead of global (conda alike). Using project based scripting and .venv help immensely initiate new fork from current project.
 
-# Virtual environment (venv)
+# Virtual environment (.venv)
+Virtual environments are closely related with package managers and it is the most crucial part. Scientists need to install libraries to create "scientific calculator" from Python programming language. Basic solution is often all-in-all Anaconda distribution and working in base environment - it is generally not recommended practice but allows uncomplicated scripting at the beginning. The big issue starts after necessity to install additional libraries. Working on multiple projects, it usually ends with conflicting library version and not functioned old scripts. Create a separate "global conda" environment like "data_science" mitigates such situations but at the end, the situation will be repeated later (regardless lightweight conda distributions like Miniconda or Minoforge). Additionally (despite progress in recent years), conda can be concluded as a slow packed manager.
+
+Project related libraries can be installed locally to created .venv by default pip manager or python native library venv. Library management is left to user. Newer managers like poetry or uv extended and modernize dependency management (from requirements.txt to pyproject.toml) and other features. uv integrates venv, is fast and automatically update all installed dependencies. User has to pay no attention to the library management and pyproject.toml can be easily transformed to new project, if necessary. After installation, new project will be started by:
+```
+uv init
+```
+and new project structure will be created:
+```
+hertz_pressure
+- .gitignore
+- .python-version
+- README.md
+- main.py
+- pyproject.toml
+```
+Virtual environment will created by:
+```
+uv run 
+```
+and new environment will be created.
+
+Created pyproject.toml contains
+```
+[project]
+name = "hertz_pressure"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+dependencies = []
+
+```
+and library can be added
+```
+uv add numpy pandas matplotlib
+```
+or removed
+```
+uv remove numpy matplotlib
+``` 
+pyproject.toml will be automatically updated. Read uv documentation for further information.
+
+Additional scientific package WinPython is one all-in-one portable solution out of focus of this text.
+
+# Version control
