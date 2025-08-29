@@ -7,7 +7,7 @@ Scripting based approach is often related with pile of scripts without clear str
 - version control (git)
 - virtual environment (.venv)
 
-Techniques like Unit testing are usually omitted and are devoted to software development itself.
+Techniques like Unit testing or CI/CD pipelines are usually omitted and are devoted to software development itself.
 
 All presented tools are intended to work locally without cloud services or subscription; eventually at institution´s intranet. The presented text is opinionated and not encompass all Python-world options.
 
@@ -82,3 +82,9 @@ pyproject.toml will be automatically updated. Read uv documentation for further 
 Additional scientific package WinPython is one all-in-one portable solution out of focus of this text.
 
 # Version control
+Version control with code repository help to archive legacy code, share scripts with colleagues and keep workspace clean (not used code can be deleted from local workspace and downloaded if necessary or legacy code can be reviewed in webbrowser). Self hosted solution should be run on back-up hard-disk or ideally at institution´s fileserver (contact your IT-administrator).
+
+Gogs offers simple self-hosted git service; Gitea offers broader functionality with appearance much alike popular software development cloud services like GitHub or GitLab. While usually not software developing in science, simple solution will be recommended.
+
+# py. or ipynb?
+Pure python files (.py) are preferred for developed functions stored in \src\core directories and batch processing. Python files can be run in interactive mode in Visual Studio Code with installed ipykernel. Jupyter Notebook (.ipynb) can be executed in Visual Studio Code with Jupyter Extensions (downloaded automatically at first .ipynb execution). 
