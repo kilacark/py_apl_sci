@@ -82,9 +82,18 @@ pyproject.toml will be automatically updated. Read uv documentation for further 
 Additional scientific package WinPython is one all-in-one portable solution out of focus of this text.
 
 # Version control
-Version control with code repository help to archive legacy code, share scripts with colleagues and keep workspace clean (not used code can be deleted from local workspace and downloaded if necessary or legacy code can be reviewed in webbrowser). Self hosted solution should be run on back-up hard-disk or ideally at institution´s fileserver (contact your IT-administrator).
+Version control with code repository help to archive legacy code, share scripts with colleagues and keep workspace clean (not used code can be deleted from local workspace and downloaded if necessary or code can be reviewed in Web Browser). Self-hosted solution should be run on back-up hard-disk or ideally at institution´s fileserver (contact your IT-administrator).
 
-Gogs offers simple self-hosted git service; Gitea offers broader functionality with appearance much alike popular software development cloud services like GitHub or GitLab. While usually not software developing in science, simple solution will be recommended.
+Gogs offers simple self-hosted git service; Gitea offers broader functionality with appearance much alike popular software development cloud services GitHub or GitLab. While usually not software developing in science, simple solution will be recommended.
 
 # py. or ipynb?
-Pure python files (.py) are preferred for developed functions stored in \src\core directories and batch processing. Python files can be run in interactive mode in Visual Studio Code with installed ipykernel. Jupyter Notebook (.ipynb) can be executed in Visual Studio Code with Jupyter Extensions (downloaded automatically at first .ipynb execution). 
+Pure python files (.py) are preferred for developed functions stored in \src\core directories and batch processing. Python files can be run in interactive mode in Visual Studio Code with installed ipykernel. Jupyter Notebook (.ipynb) can be executed in Visual Studio Code with Jupyter Extensions (downloaded automatically at first .ipynb execution). Below are shown interactive .py with cells and .ipynb scripts:
+
+![Interactive Python](../figs/py_with_cells.png){width=100%}
+
+
+![Jupyter Notebook](../figs/ipynb.png){width=100%}
+
+Python file tends to be shorter with figure placed into the separated right interactive window (install ipympl and uncomment %matplotlib widget to work interactively with figures). Jupyter Notebook places cells output top-bottom and markdown cells are visually more appealing but script is far less concise. Usage is for practical work matter of preference.
+
+# Typing and co.
