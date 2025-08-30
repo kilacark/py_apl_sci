@@ -5,7 +5,7 @@ import pandas as pd
 
 from core import core_funcs as cf
 
-# %matplotlib widget
+# %matplotlib widget  # noqa
 # %% ## Computation
 x = np.linspace(-2, 2, 100)
 y = x**2
