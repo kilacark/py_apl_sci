@@ -1,7 +1,6 @@
 ---
-documentclass: book
+documentclass: article
 title: Python in Applied Science
-author: Michal Kráčalík
 ---
 
 # Introduction

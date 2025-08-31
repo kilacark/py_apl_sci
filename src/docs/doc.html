@@ -4,154 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Michal Kráčalík" />
   <title>Python in Applied Science</title>
   <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #1a1a1a;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -168,14 +22,13 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Python in Applied Science</h1>
-<p class="author">Michal Kráčalík</p>
 </header>
-<h1 data-number="1" id="introduction"><span
-class="header-section-number">1</span> Introduction</h1>
+<h1 id="introduction">Introduction</h1>
 <p>Python is as a multi-purpose programming language heavily used in
 various branches of science. Apart from software development in science,
 prominent is scripting based approach for computation, scientific
@@ -199,8 +52,7 @@ and are devoted to software development itself.</p>
 services or subscription; eventually at institution´s intranet. The
 presented text is opinionated and not encompass all Python-world
 options.</p>
-<h1 data-number="2" id="integrated-development-environment-ide"><span
-class="header-section-number">2</span> Integrated Development
+<h1 id="integrated-development-environment-ide">Integrated Development
 Environment (IDE)</h1>
 <p>There are plenty of IDE. Spyder focuses directly on science/data
 science and has MATLAB alike appearance (Editor window, Variable
@@ -214,8 +66,7 @@ occasionally rely on CLI (command line interface) and generally, IDE can
 be used according to reader´s preferences. JupyterLab is out scope of
 this text because .ipynb can be run from Visual Studio Code (with
 ipykernel library)</p>
-<h1 data-number="3" id="project-based-scripting"><span
-class="header-section-number">3</span> Project Based Scripting</h1>
+<h1 id="project-based-scripting">Project Based Scripting</h1>
 <p>Science is generally connected with the idea-testing with lot of
 iterations. Hence, there are often scripts like ‘model_temp.py;
 model_temp_v2.py’ etc. The good project structure and version control
@@ -245,8 +96,7 @@ on specific scientific task. It is additionally recommended use project
 oriented .venv (pip alike) instead of global (conda alike). Using
 project based scripting and .venv help immensely initiate new fork from
 current project.</p>
-<h1 data-number="4" id="virtual-environment-.venv"><span
-class="header-section-number">4</span> Virtual Environment (.venv)</h1>
+<h1 id="virtual-environment-.venv">Virtual Environment (.venv)</h1>
 <p>Virtual environments are closely related with package managers and it
 is the most crucial part. Scientists need to install libraries to create
 “scientific calculator” from Python programming language. Basic solution
@@ -295,8 +145,7 @@ dependencies = []
 for further information.</p>
 <p>Additional scientific package WinPython is one all-in-one portable
 solution out of focus of this text.</p>
-<h1 data-number="5" id="version-control"><span
-class="header-section-number">5</span> Version Control</h1>
+<h1 id="version-control">Version Control</h1>
 <p>Version control with code repository help to archive legacy code,
 share scripts with colleagues and keep workspace clean (actually not
 used code can be deleted from local workspace and downloaded if
@@ -307,8 +156,7 @@ fileserver (contact your IT-administrator).</p>
 functionality with appearance much alike popular software development
 cloud services GitHub or GitLab. While software is usually not developed
 in science, simple solution will be recommended.</p>
-<h1 data-number="6" id="py-or-.ipynb"><span
-class="header-section-number">6</span> .py or .ipynb?</h1>
+<h1 id="py-or-.ipynb">.py or .ipynb?</h1>
 <p>Pure python files (.py) are preferred for developed functions stored
 in <code>\src\core</code> directories and batch processing. Python files
 can be run in interactive mode in Visual Studio Code with installed
@@ -333,8 +181,7 @@ widget to work interactively with figures). Jupyter Notebook places
 cells output top-bottom and markdown cells are visually more appealing
 but script is far less concise. Nevertheless, use only .ipynb for
 interactive work with graph (see next chapter).</p>
-<h1 data-number="7" id="code-formatter"><span
-class="header-section-number">7</span> Code Formatter</h1>
+<h1 id="code-formatter">Code Formatter</h1>
 <p>Code formatter is an extremely useful tool to maintain readability of
 code. However, autopep8 extension doesn´t work within .ipynb (use
 %matplotlib widget # noqa to allow code formation in interactive .py)
@@ -345,8 +192,7 @@ interactive manner.</p>
 <p>Setup chosen code formatter on “editor.formatOnSave”: true
 (“notebook.formatOnSave.enabled”: true) in Visual Studio Code for
 automatic code formatting.</p>
-<h1 data-number="8" id="type-hints"><span
-class="header-section-number">8</span> Type Hints</h1>
+<h1 id="type-hints">Type Hints</h1>
 <p>Use type hints within your functions - it is a minimal effort to
 write a code like this:</p>
 <pre><code>from typing import List
@@ -400,8 +246,7 @@ in science but calling variety of functions e.g. from
 inp_l = [1, 2, 3]
 cf.ext_list(inp_l, 10, 20)</code></pre>
 <p>and keeping clean main code enhance readability.</p>
-<h1 data-number="9" id="conclusions"><span
-class="header-section-number">9</span> Conclusions</h1>
+<h1 id="conclusions">Conclusions</h1>
 <p>Some software development techniques were introduced to enhance
 reusability and readability of Python codes within scripting usual in
 scientific environment. Project based scripting was introduced as a main
