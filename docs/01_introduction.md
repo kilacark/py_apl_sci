@@ -98,9 +98,9 @@ Pure python files (.py) are preferred for developed functions stored in ```\src\
 ](#fig:interactive-python)) and ipynb script ([Figure \ref{fig:jupyter-notebook}
 ](#fig:jupyter-notebook)):
 
-![Interactive Python](../figs/py_with_cells.png){#fig:interactive-python width=100%}
+![Interactive Python](figs/py_with_cells.png){#fig:interactive-python width=100%}
 
-![Jupyter Notebook](../figs/ipynb.png){#fig:jupyter-notebook width=50%}
+![Jupyter Notebook](figs/ipynb.png){#fig:jupyter-notebook width=50%}
 
 Python file tends to be shorter with figure placed into the separated right interactive window (install ipympl and uncomment %matplotlib widget to work interactively with figures). Jupyter Notebook places cells output top-bottom and markdown cells are visually more appealing but script is far less concise. Nevertheless, use only .ipynb for interactive work with graph (see next chapter).
 
